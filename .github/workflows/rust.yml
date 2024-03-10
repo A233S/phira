@@ -17,6 +17,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build
-      run: bash build_wasm.sh
+      run: cargo build --target wasm32-unknown-unknown --release --bin prpr-player
     - name: Run tests
       run: ls -l
